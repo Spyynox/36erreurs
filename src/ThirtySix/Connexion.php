@@ -1,5 +1,6 @@
 <?php
 namespace ThirtySix;
+// require_once('../mysql/36errors.sql');
 
 class Connexion{
 

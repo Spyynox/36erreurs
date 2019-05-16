@@ -1,6 +1,5 @@
 <?php
 require_once("../vendor/autoload.php");
-
 $request_url = $_SERVER['REQUEST_URI'];
 
 $path = parse_url($request_url, PHP_URL_PATH);
@@ -31,10 +30,10 @@ if(isset($url_composants[2])){
 
 try{
 
-  list($controller, $action) = ThirtySix\Router::load($action_name,$controller_name);
+  list($controller, $action) = ThirtySix\Router::load($controller_name,$action_name);
 
 }catch(ThirtySix\Exception\ControllerNotFound $e){
-  $controller = new ErrorController();
+  $controller = new Controller\ErrorController();
   $action = "e404";
   $argument = $e;
 

@@ -1,7 +1,7 @@
 <?php
 
-namespace Exception;
+namespace ThirtySix\Exception;
 
 class ControllerNotFound extends \Exception{
-
+    
 }
